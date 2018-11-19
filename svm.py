@@ -6,10 +6,10 @@ from urllib import unquote
 from sklearn.externals import joblib
 
 
-xss_file_path = '/Users/jeary/Desktop/xss_sample2.txt';
-xss_sample_path = '/Users/jeary/Desktop/xss_sample.txt';
-safe_file_path ='/Users/jeary/Desktop/result_safe_log2.txt';
-model_student = '/Users/jeary/Desktop/lr.model'
+xss_file_path = '';  #xss样本
+xss_sample_path = ''; #过滤出可用
+safe_file_path ='';  #正常请求
+model_student = '' #输出地址
 
 def vector(req_url):
     key = ["script", "iframe", "javascript", "<", ">", "\"", "\'", "%", "(", ")", "xss", "marquee", "alert", "svg",
